@@ -1,0 +1,300 @@
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fffaf0;
+    color: #3d2925;
+    line-height: 1.7;
+}
+
+header {
+    background-color: #581c2b;
+    padding: 20px 7%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    color: #e6bd75;
+    font-size: 28px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #e6bd75;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+section {
+    padding: 70px 7%;
+}
+
+section h2 {
+    text-align: center;
+    color: #581c2b;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+section h3 {
+    color: #581c2b;
+    margin-bottom: 12px;
+}
+
+#home {
+    background-color: #f3e5d0;
+    text-align: center;
+    padding: 120px 7%;
+}
+
+#home h1 {
+    color: #581c2b;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#home a {
+    display: inline-block;
+    background-color: #581c2b;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#home a:hover {
+    background-color: #a36b32;
+}
+
+#about {
+    background-color: #fffaf0;
+}
+
+.about-story,
+.founder,
+.mission,
+.vision,
+.values {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-left: 4px solid #a36b32;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.values ul {
+    padding-left: 25px;
+}
+
+#menu {
+    background-color: #f3e5d0;
+}
+
+.food-category {
+    margin-bottom: 50px;
+}
+
+.food-category h3 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.menu-item img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto 10px;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+}
+
+.menu-item h4 {
+    color: #581c2b;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.menu-item p:last-child {
+    color: #a36b32;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contact {
+    background-color: #fffaf0;
+    text-align: center;
+}
+
+#contact form {
+    max-width: 550px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+#contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact button {
+    background-color: #581c2b;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contact button:hover {
+    background-color: #a36b32;
+}
+
+footer {
+    background-color: #581c2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #home {
+        padding: 80px 5%;
+    }
+
+    #home h1 {
+        font-size: 30px;
+    }
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .menu-item {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 5%;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    #home h1 {
+        font-size: 27px;
+    }
+
+    #back-to-top {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #800020;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#back-to-top:hover {
+    background-color: #b8860b;
+}
